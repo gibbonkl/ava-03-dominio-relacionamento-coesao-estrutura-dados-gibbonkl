@@ -1,3 +1,4 @@
+package Carbnb;
 
 public class Date {
 
@@ -5,9 +6,8 @@ public class Date {
 	private int mes;
 	private int ano;
 
-	public Date(int d, int m, int a) throws DataInvalidaException {
-		if(d < 1 || d > 31 || m < 1 || m > 12 || a < 2018) 
-			throw new DataInvalidaException();
+	public Date(int d, int m, int a) {
+		if(d < 1 || d > 31 || m < 1 || m > 12 || a < 2018) return;
 		this.dia = d;
 		this.mes = m;
 		this.ano = a;
@@ -28,7 +28,4 @@ public class Date {
 		
 		return aux;
 	}
-	
-	
-
 }
